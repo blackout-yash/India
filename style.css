@@ -1,0 +1,178 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    font-family: 'Anek Latin', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Smooch', cursive;
+    font-family: 'Trispace', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+header{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)),url(/Image/tajmahal.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+}
+
+footer img{
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    animation-name: running;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes running{
+    0%{left: 0;}
+    100%{left: 80%;}
+}
+
+nav{
+    width: 100%;
+    height: 15vh;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+#logo{
+    width: 25%;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bolder;
+
+    transition-property: all;
+    transition-duration: 1s;
+}
+
+#logo:hover{
+    font-size: 50px;
+}
+
+.menu{
+    width: 40%;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu a{
+    width: 25%;
+    text-decoration: none;
+    color: wheat;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+}
+
+.menu a::before{
+    content: "";
+    position: absolute;
+    left: -9px;
+    top: -3px;
+    width: 15px;
+    height: 16px;
+    border-top: 3px solid #00b894;
+    border-left: 3px solid #00b894;
+    transition: all 0.4s;
+}
+
+.menu a:hover::before{
+    width: 50%;
+    height: 80%;
+}
+
+
+main{
+    width: 100%;
+    height: 85vh;
+
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 10% 0 0 0;
+}
+
+section h3{
+    font-size: 35px;
+    font-weight: 200px;
+    letter-spacing: 3px;
+    text-shadow: 1px 1px 2px black;
+    text-transform: capitalize;
+}
+
+section h1{
+    font-size: 55px;
+    letter-spacing: 3px;
+    text-shadow: 1px 3px 4px black;
+    text-transform: capitalize;
+}
+
+section p{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 15px 0 30px 0;
+    text-shadow: 1px 2px 1px black;
+    text-transform: capitalize;
+}
+
+section a{
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 1px;
+    border-radius: 20px;
+
+    transition: all 0.9s ease;
+}
+
+.btn_one{
+    background-color: white;
+    color: black;
+}
+
+.btn_one:hover{
+    background-color: #34495E;
+    color: #fff;
+}
+
+.btn_two{
+    background-color: #00b894;
+    color: white;
+}
+
+.btn_two:hover{
+    background-color: #34495E;
+    color: #fff;
+}
+
+.change_content::after{
+    content: "";
+    animation: changetext 10s infinite linear;
+    color: #00b894;
+}
+
+@keyframes changetext {
+    0%{content: "KOCHI";}
+    25%{content: "PUNE";}
+    40%{content: "AGRA";}
+    60%{content: "GAYA";}
+    80%{content: "DELHI";}
+    100%{content: "PATNA";}
+}
